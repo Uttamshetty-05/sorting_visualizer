@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+#userInput {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.controls button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#bars {
+    margin-top: 30px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.bar {
+    width: 35px;
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: height 0.5s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 5px; /* pushes the number inside */
+}
