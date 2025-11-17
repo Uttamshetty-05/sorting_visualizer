@@ -4,7 +4,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Create bars from user input
+
 function createBars() {
     barsContainer.innerHTML = "";
 
@@ -16,13 +16,13 @@ function createBars() {
     numbers.forEach(num => {
         let bar = document.createElement("div");
         bar.classList.add("bar");
-        bar.style.height = (num * 4) + "px"; // scale height
-        bar.innerText = num; // show number on bar
+        bar.style.height = (num * 4) + "px"; 
+        bar.innerText = num; 
         barsContainer.appendChild(bar);
     });
 }
 
-// Swap values AND numbers
+
 function swap(bar1, bar2) {
     let tempHeight = bar1.style.height;
     bar1.style.height = bar2.style.height;
@@ -32,10 +32,6 @@ function swap(bar1, bar2) {
     bar1.innerText = bar2.innerText;
     bar2.innerText = tempText;
 }
-
-/////////////////////////////////////////////////
-// 1️⃣ BUBBLE SORT
-/////////////////////////////////////////////////
 async function bubbleSort() {
     let bars = document.querySelectorAll(".bar");
 
@@ -49,14 +45,11 @@ async function bubbleSort() {
                 swap(bars[j], bars[j + 1]);
             }
 
-            await sleep(600); // slower animation
+            await sleep(600); 
         }
     }
 }
 
-/////////////////////////////////////////////////
-// 2️⃣ SELECTION SORT
-/////////////////////////////////////////////////
 async function selectionSort() {
     let bars = document.querySelectorAll(".bar");
 
@@ -76,9 +69,6 @@ async function selectionSort() {
     }
 }
 
-/////////////////////////////////////////////////
-// 3️⃣ INSERTION SORT
-/////////////////////////////////////////////////
 async function insertionSort() {
     let bars = document.querySelectorAll(".bar");
 
